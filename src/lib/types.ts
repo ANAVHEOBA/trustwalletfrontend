@@ -65,4 +65,18 @@ export interface APIError {
   error: string;
 }
 
-export type APIResponse<T> = T | APIError; 
+export type APIResponse<T> = T | APIError;
+
+export interface WalletImportResponse {
+  success: boolean;
+  data: {
+    token: string;
+    walletAddress: string;
+    message: string;
+  };
+}
+
+export interface WalletLogoutResponse {
+  success: boolean;
+  message: string;
+} 
